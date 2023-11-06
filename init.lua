@@ -17,6 +17,7 @@ minetest.register_tool("railgun:railgun",{
 				inv:remove_item("main", "railgun:railgun_rod")
 				itemstack:add_wear(655.35)
 			else
+				minetest.sound_play("unavailable", {to_player=name})
 				return itemstack
 			end
 		end
@@ -37,6 +38,7 @@ minetest.register_tool("railgun:railgun",{
 				glow = 14
 			})
 		end
+		minetest.sound_play("nexfire", {pos=pos, gain = 0.3})
 		local rayend = vector.add(pos, vector.multiply(dir, range))
 		local ray = core.raycast(pos, rayend, true, false)
 		for pointed_thing in ray do
