@@ -1,5 +1,6 @@
 # minetest-mod-railgun
-Colorable railgun using raycast and particles
+Colorable railgun using raycast and particles.  
+Damages entities and players, breaks the nodes.
 ### Usage
 * Railgun uses rods as ammo for players without `creative` priv.
 * Railgun can be colored using dyes(at craft grid) or by `/railgun_color` command(if player have `creative` priv)
