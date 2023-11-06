@@ -1,0 +1,2 @@
+railgun.enable_crafts (Enable crafting railgun) bool true
+railgun.range (Railgun range) int 100
