@@ -1,4 +1,11 @@
-                    GNU GENERAL PUBLIC LICENSE
+This license is used for two sound files used in this repository:  
+`nexfire.ogg` and `unavailable.ogg`. The source is Xonotic Project:  
+https://xonotic.org/  
+These sound files can be found on:  
+https://gitlab.com/xonotic/xonotic-data.pk3dir/-/blob/master/sound/weapons/nexfire.ogg  
+https://gitlab.com/xonotic/xonotic-data.pk3dir/-/blob/master/sound/weapons/unavailable.ogg  
+  
+                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
