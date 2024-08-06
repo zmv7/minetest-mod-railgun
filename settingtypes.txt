@@ -1,2 +1,8 @@
 railgun.enable_crafts (Enable crafting railgun) bool true
+
+railgun.destroy_nodes (Allow destroying nodes using railgun) bool true
+
 railgun.range (Railgun range) int 100
+
+# Set lower value to improve the perfomance
+railgun.density (Railgun particles density) int 3

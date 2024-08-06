@@ -1,4 +1,6 @@
 local range = minetest.settings:get("railgun.range") or 100
+local density = minetest.settings:get("railgun.density") or 3
+local destroy_nodes = minetest.settings:get_bool("railgun.destroy_nodes", true)
 
 minetest.register_tool("railgun:railgun",{
 	description = "Railgun",
@@ -28,9 +30,9 @@ minetest.register_tool("railgun:railgun",{
 		pos.y = pos.y + props.eye_height*0.9
 		pos.x = pos.x + math.cos(yaw)/4
 		pos.z = pos.z + math.sin(yaw)/4
-		for i=1, range*10 do
+		for i=1, range*density do
 			minetest.add_particle({
-				pos = {x = pos.x + dir.x * i/10, y = pos.y + dir.y * i/10, z = pos.z + dir.z * i/10},
+				pos = {x = pos.x + dir.x * i/density, y = pos.y + dir.y * i/density, z = pos.z + dir.z * i/density},
 				expirationtime = 0.2+i/5000,
 				size = 0.8,
 				vertical = false,
@@ -52,7 +54,7 @@ minetest.register_tool("railgun:railgun",{
 				}, dir)
 			end
 			end
-			if pointed_thing.type == "node" then
+			if destroy_nodes and pointed_thing.type == "node" then
 				if not minetest.is_protected(pointed_thing.under, name) then
 					local node = minetest.get_node(pointed_thing.under)
 					local rnode = minetest.registered_nodes[node.name]
